@@ -1,0 +1,21 @@
+.navbar {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-item a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.nav-item a:hover {
+  color: #ff5722;
+}

@@ -1,0 +1,67 @@
+/* form.component.scss */
+
+/* Basic styling for the form */
+.form-margin {
+  width: 100%;
+  max-width: 500px; /* Limit the width of the form */
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background color for the form */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for form headings */
+.form-margin h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Style for labels */
+.form-margin label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* Style for input fields */
+.form-margin input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px; /* Space between fields */
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+/* Style for error messages */
+.text-danger {
+  color: #d9534f;
+  font-size: 0.875rem;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Style for the submit button */
+.form-margin input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-margin input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Add spacing before and after form elements */
+.form-margin > * {
+  margin-bottom: 20px;
+}

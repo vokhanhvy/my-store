@@ -1,0 +1,69 @@
+/* confirmation.component.scss */
+
+/* Container for the entire confirmation page */
+.confirmation-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #f4f4f4; /* Light gray background */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Centered content container */
+.confirmation-content {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px; /* Max width to prevent too wide on large screens */
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Success icon styling */
+.confirmation-icon {
+  margin-bottom: 20px;
+}
+
+.confirmation-icon img {
+  width: 80px; /* Adjust size as needed */
+  height: auto;
+}
+
+/* Header styling */
+.confirmation-header {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #27ae60; /* Green color for success */
+  margin-bottom: 15px;
+}
+
+/* Message styling */
+.confirmation-message h1 {
+  font-size: 1.8rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.confirmation-message p {
+  font-size: 1rem;
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Return link styling */
+.confirmation-return {
+  margin-top: 20px;
+}
+
+.return-link {
+  font-size: 1rem;
+  color: #3498db; /* Blue color for link */
+  text-decoration: none;
+}
+
+.return-link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="product-container">
+    <div class="product-item" *ngFor="let product of products">
+      <a [routerLink]="['/item-detail', product.id]">
+        <img
+          class="product-image"
+          src="{{ product.url }}"
+          alt="{{ product.name }}"
+        />
+      </a>
+      <div class="product-detail">
+        <b>{{ product.name }}</b>
+      </div>
+      <div class="product-detail">$ {{ product.price }}</div>
+      <button
+        (click)="addToCart(product)"
+        class="product-detail btn btn-primary"
+      >
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div>

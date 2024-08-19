@@ -1,0 +1,81 @@
+<form class="form-margin" #form="ngForm" (ngSubmit)="onSubmit()">
+  <h1>Checkout</h1>
+
+  <label for="firstName">Full Name: </label><br />
+  <input
+    type="text"
+    id="firstName"
+    name="firstName"
+    required
+    placeholder="Enter First Name"
+    [(ngModel)]="firstName"
+    #firstNameModel="ngModel"
+    (ngModelChange)="validateField('firstName')"
+  />
+  <div *ngIf="firstNameModel.invalid && firstNameModel.touched">
+    <small class="text-danger" *ngIf="firstNameModel.errors?.['required']">
+      Name is required
+    </small>
+  </div>
+  <br />
+
+  <label for="address">Address: </label><br />
+  <input
+    type="text"
+    id="address"
+    name="address"
+    required
+    placeholder="Enter Address"
+    [(ngModel)]="address"
+    #addressModel="ngModel"
+    (ngModelChange)="validateField('address')"
+  />
+  <div *ngIf="addressModel.invalid && addressModel.touched">
+    <small class="text-danger" *ngIf="addressModel.errors?.['required']">
+      Address is required
+    </small>
+  </div>
+  <br />
+
+  <label for="creditCard">Credit Card Number: </label><br />
+  <input
+    type="text"
+    id="creditCard"
+    name="creditCard"
+    required
+    pattern="[0-9]*"
+    maxlength="16"
+    minlength="16"
+    placeholder="(16-digit number)"
+    [(ngModel)]="creditCard"
+    #creditCardModel="ngModel"
+    (ngModelChange)="validateField('creditCard')"
+  />
+  <div *ngIf="creditCardModel.invalid && creditCardModel.touched">
+    <small class="text-danger" *ngIf="creditCardModel.errors?.['required']">
+      Credit Card Number is required
+    </small>
+    <small class="text-danger" *ngIf="creditCardModel.errors?.['pattern']">
+      Credit Card Number should contain only numbers
+    </small>
+    <small class="text-danger" *ngIf="creditCardModel.errors?.['minlength']">
+      Credit Card Number should be exactly 16 digits long
+    </small>
+    <small class="text-danger" *ngIf="creditCardModel.errors?.['maxlength']">
+      Credit Card Number should be exactly 16 digits long
+    </small>
+  </div>
+  <br />
+
+  <input
+    [disabled]="form.invalid"
+    type="submit"
+    value="Submit"
+    class="btn btn-primary"
+  />
+</form>
+
+<app-checkout-success
+  *ngIf="showSuccess"
+  [firstName]="firstName"
+></app-checkout-success>
